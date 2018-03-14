@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+      <link rel="stylesheet" href="../amazeui/css/amazeui.min.css">
+  <style>
+  body,html{
+    margin:0;
+    padding:0;
+  }
+  .top{
+    height:140px;
+    background: url(../image/loginbg_01.png)center center no-repeat;
+    background-size: 100%;
+    position: relative;
+  }
+  .top i{
+    /*display: inline-block;
+    width: 24px;
+    height: 24px;*/
+    position: absolute;
+    top:25px;
+    left:5%;
+    background-size: 100%;
+    /*background-color: #fff;*/
+  }
+  .top span{
+    display: inline-block;
+    width: 48px;
+    height: 22px;
+    position: absolute;
+    top:25px;
+    right:5%;
+    border:1px solid #fff;
+    color:#fff;
+    text-align: center;
+    line-height: 22px;
+    border-radius: 15px;
+  }
+  .close{
+
+  }
+  </style>
+</head>
+<body>
+
+  <div class="top">
+      <i class="close am-icon-times-circle am-icon-md "></i>
+      <span class="reg">注册</span>
+  </div>
+</body>
+<script src="../script/api.js" charset="utf-8"></script>
+<script type="text/javascript">
+apiready = function(){
+  api.parseTapmode()
+
+
+
+}
+</script>
+</html>

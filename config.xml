@@ -27,5 +27,5 @@
 	<permission name="fileSystem" />
 	<permission name="internet" />
 	<permission name="bootCompleted" />
-	<permission name="hardware" />
+	<permission name="hardware" />  <feature name="wx">      <param name="urlScheme" value="wxe88874090dabd350"/>      <param name="apiKey" value="wxe88874090dabd350"/>      <param name="apiSecret" value="07f6df28df78a3d2362b943f9742f4c2"/>    </feature>
 </widget>

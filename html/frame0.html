@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0" />
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title>1</title>
+    <link rel="stylesheet" type="text/css" href="../css/aui.css" />
+    <link rel="stylesheet" type="text/css" href="../css/aui-slide.css" />
+    <link rel="stylesheet" type="text/css" href="../css/swiper-4.1.6.min.css">
+
+
+    <style>
+    body{
+      background-color: #fff;
+    }
+        .main-top {
+            height: 256px;
+            background-color: #272727;
+            position: relative;
+        }
+
+        .main-search {
+            z-index: 50;
+            width: 100%;
+            /*background-color: red;*/
+            /*margin-top: 10px;*/
+            /*height:25px;*/
+            /*position: absolute;*/
+            position: fixed;
+            top: 0;
+            left: 0;
+        }
+
+        .top-left {
+            width: 33px;
+            /*height: 25px;*/
+            padding-left: 17px;
+            padding-right: 20px;
+            line-height: 46px;
+        }
+
+        .aui-iconfont {
+            font-size: 1rem;
+        }
+
+        .index-xx {
+            background-image: url(../icon/index-xx.png);
+            width: 23px;
+            height: 23px;
+            margin-top: 12px;
+            background-size: cover;
+            margin-left: 20px;
+        }
+
+        .index-bigimg {
+            width: 90%;
+            height: 160px;
+            margin: 0 auto;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        .index-bigimg img {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+
+        /*.swiper-container {
+            margin-left: 10%;
+        }*/
+
+        .index-slide {
+            width: 90px;
+            height: 155px;
+        }
+
+        .swiper-slide {
+            margin: 0 5%;
+            color:#3b3b3b;
+            font-size: 15px;
+            text-align: center;
+            line-height: 35px;
+        }
+        .index-main{
+          margin-top:9px;
+          width:90%;
+          margin:0 auto;
+          position: relative;
+
+        }
+        .index-main-box{
+          padding-bottom:10px;
+        }
+        .index-main-box span{
+          padding-left:2.5%;
+          font-size:16px;
+          font-weight: bold;
+        }
+        .index-main-box span:before{
+          content: "";
+          width:2px;
+          height:16px;
+          position: absolute;
+          left:0;
+          background-color: #000;
+          margin-top:5px;
+        }
+        .aaa{
+          width:auto;
+        }
+        .index-main-slide{
+          width:128px;
+          height:78px;
+        }
+        #swiper-container3{
+          padding-top:20px;
+        }
+        .youlike{
+          width:100%;
+          border-top:8px slolid #f0f0f0;
+          position: relative;
+        }
+        .youlike-box{
+          width:90%;
+          margin:0 auto;
+          padding-left:11px;
+          font-weight: bold;
+          font-size: 16px;
+        }
+        .index-line{
+          width: 100%;
+            height: 2px;
+            background-color:#f1f0f1;
+            position: absolute;
+            top: 26px;
+        }
+        .youlike-box:before{
+          content: "";
+          width:2px;
+          height:16px;
+          position: absolute;
+          left:5%;
+          background-color: #000;
+          margin-top:5px;
+          font-weight: bold;
+        }
+        .goods-list{
+          /*width:90%;
+          margin:0 auto;*/
+        }
+        /*.goods-list ul{
+          overflow: hidden;
+        }*/
+        .goods-list ul li{
+          float: left;
+          width: 155px;
+          height: 256px;
+          margin-top:30px;
+          margin-left:33px;
+          margin-bottom: 30px;
+        }
+        .goods-list-img{
+          width: 155px;
+          height: 207px;
+        }
+        .goodsname{
+          font-size:16px;
+          color:#6d6d6d;
+          padding-top:15px;
+          padding-bottom:23px;
+        }
+        .goods-list-word p{
+          overflow: hidden;
+        }
+        .goods-price{
+          font-size: 16px;
+          font-weight: bold;
+          color:#323232;
+        }
+        .price-more{
+          padding-right:8px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main-search" style="overflow:hidden">
+        <div class="top-left aui-iconfont aui-icon-menu aui-pull-left" style="color:#fff;"></div>
+        <div class="aui-searchbar aui-pull-left" id="search" style="width:300px;">
+            <div class="aui-searchbar-input aui-border-radius" tapmode>
+                <i class="aui-iconfont aui-icon-search"></i>
+                <form action="javascript:search();">
+                    <input type="search" placeholder="请输入搜索内容" id="search-input">
+                </form>
+            </div>
+        </div>
+        <div class="index-xx aui-pull-left"></div>
+    </div>
+    <!-- 搜索结束 -->
+    <div class="main-top">
+        <div id="aui-slide">
+            <div class="aui-slide-wrap">
+                <div class="aui-slide-node bg-dark">
+                    <img src="../image/index-bg.png" />
+                </div>
+                <div class="aui-slide-node bg-dark">
+                    <img src="../image/index-bg.png" />
+                </div>
+                <div class="aui-slide-node bg-dark">
+                    <img src="../image/index-bg.png" />
+                </div>
+            </div>
+            <div class="aui-slide-page-wrap">
+            </div>
+        </div>
+    </div>
+    <!-- 头部轮播图结束 -->
+    <div class="index-bigimg">
+        <img src="../image/index-bigimg.png" alt="">
+    </div>
+    <!-- 头部banner结束 -->
+    <div class="swiper-container" id="swiper-container1">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide index-slide"><img src="../image/index-img1.png" alt="">VANS</div>
+            <div class="swiper-slide index-slide"><img src="../image/index-img2.png" alt="">Stussy</div>
+            <div class="swiper-slide index-slide"><img src="../image/index-img3.png" alt="">adidas</div>
+            <div class="swiper-slide index-slide"><img src="../image/index-img4.png" alt="">converse</div>
+            <div class="swiper-slide index-slide"><img src="../image/index-img5.png" alt="">improper</div>
+            <div class="swiper-slide index-slide"><img src="../image/index-img6.png" alt="">COMBACK</div>
+            <div class="swiper-slide index-slide"><img src="../image/index-img1.png" alt="">VANS</div>
+            <div class="swiper-slide index-slide"><img src="../image/index-img2.png" alt="">Stussy</div>
+            <div class="swiper-slide index-slide"><img src="../image/index-img3.png" alt="">adidas</div>
+            <div class="swiper-slide index-slide"><img src="../image/index-img4.png" alt="">converse</div>
+            <div class="swiper-slide index-slide"><img src="../image/index-img5.png" alt="">improper</div>
+            <div class="swiper-slide index-slide"><img src="../image/index-img6.png" alt="">COMBACK</div>
+        </div>
+    </div>
+    <!-- 滑动轮播1结束 -->
+    <div class="index-bigimg">
+        <img src="../image/index-bigimg2.png" alt="">
+    </div>
+    <!-- 头部banner2结束 -->
+    <div class="swiper-container" id="swiper-container2">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide index-slide"><img src="../image/index-img1.png" alt="">VANS</div>
+            <div class="swiper-slide index-slide"><img src="../image/index-img2.png" alt="">Stussy</div>
+            <div class="swiper-slide index-slide"><img src="../image/index-img3.png" alt="">adidas</div>
+            <div class="swiper-slide index-slide"><img src="../image/index-img4.png" alt="">converse</div>
+            <div class="swiper-slide index-slide"><img src="../image/index-img5.png" alt="">improper</div>
+            <div class="swiper-slide index-slide"><img src="../image/index-img6.png" alt="">COMBACK</div>
+            <div class="swiper-slide index-slide"><img src="../image/index-img1.png" alt="">VANS</div>
+            <div class="swiper-slide index-slide"><img src="../image/index-img2.png" alt="">Stussy</div>
+            <div class="swiper-slide index-slide"><img src="../image/index-img3.png" alt="">adidas</div>
+            <div class="swiper-slide index-slide"><img src="../image/index-img4.png" alt="">converse</div>
+            <div class="swiper-slide index-slide"><img src="../image/index-img5.png" alt="">improper</div>
+            <div class="swiper-slide index-slide"><img src="../image/index-img6.png" alt="">COMBACK</div>
+        </div>
+    </div>
+    <!-- 滑动轮播2结束 -->
+    <div class="index-main">
+      <div class="index-line"></div>
+      <div class="index-main-box">
+        <span>编辑推荐</span>
+      </div>
+      <div id="aui-slide2">
+          <div class="aui-slide-wrap">
+              <div class="aui-slide-node bg-dark">
+                  <img src="../image/index-bigimg3.png" />
+              </div>
+              <div class="aui-slide-node bg-dark">
+                  <img src="../image/index-bigimg3.png" />
+              </div>
+              <div class="aui-slide-node bg-dark">
+                  <img src="../image/index-bigimg3.png" />
+              </div>
+              <div class="aui-slide-node bg-dark">
+                  <img src="../image/index-bigimg3.png" />
+              </div>
+              <div class="aui-slide-node bg-dark">
+                  <img src="../image/index-bigimg3.png" />
+              </div>
+              <div class="aui-slide-node bg-dark">
+                  <img src="../image/index-bigimg3.png" />
+              </div>
+              <div class="aui-slide-node bg-dark">
+                  <img src="../image/index-bigimg3.png" />
+              </div>
+              <div class="aui-slide-node bg-dark">
+                  <img src="../image/index-bigimg3.png" />
+              </div>
+          </div>
+          <div class="aui-slide-page-wrap">
+              <!--分页容器-->
+          </div>
+      </div>
+
+      <div class="swiper-container" id="swiper-container3">
+          <div class="swiper-wrapper">
+              <div class="swiper-slide index-main-slide"><img src="../image/index-img7.png" alt=""></div>
+              <div class="swiper-slide index-main-slide"><img src="../image/index-img7.png" alt=""></div>
+              <div class="swiper-slide index-main-slide"><img src="../image/index-img8.png" alt=""></div>
+              <div class="swiper-slide index-main-slide"><img src="../image/index-img8.png" alt=""></div>
+              <div class="swiper-slide index-main-slide"><img src="../image/index-img7.png" alt=""></div>
+              <div class="swiper-slide index-main-slide"><img src="../image/index-img8.png" alt=""></div>
+              <div class="swiper-slide index-main-slide"><img src="../image/index-img7.png" alt=""></div>
+              <div class="swiper-slide index-main-slide"><img src="../image/index-img8.png" alt=""></div>
+              <div class="swiper-slide index-main-slide"><img src="../image/index-img7.png" alt=""></div>
+              <div class="swiper-slide index-main-slide"><img src="../image/index-img8.png" alt=""></div>
+              <div class="swiper-slide index-main-slide"><img src="../image/index-img7.png" alt=""></div>
+              <div class="swiper-slide index-main-slide"><img src="../image/index-img8.png" alt=""></div>
+          </div>
+      </div>
+    </div>
+<!-- 编辑推荐结束 -->
+
+<div class="youlike">
+  <div class="index-line"></div>
+  <div class="youlike-box">
+    <span>你可能喜欢</span>
+  </div>
+
+  <div class="goods-list">
+    <ul>
+      <li>
+        <div class="goods-list-img">
+          <img src="../image/index-goods3.png" alt="">
+        </div>
+        <div class="goods-list-word">
+          <p class="goodsname">adidas 休闲运动鞋</p>
+          <p>
+            <span class="aui-pull-left goods-price">￥1299.00</span>
+            <i class="aui-pull-right aui-iconfont aui-icon-more price-more"></i>
+          </p>
+        </div>
+      </li>
+      <li>
+        <div class="goods-list-img">
+          <img src="../image/index-goods2.png" alt="">
+        </div>
+        <div class="goods-list-word">
+          <p class="goodsname">adidas 休闲运动鞋</p>
+          <p>
+            <span class="aui-pull-left goods-price">￥1299.00</span>
+            <i class="aui-pull-right aui-iconfont aui-icon-more price-more"></i>
+          </p>
+        </div>
+      </li>
+      <li>
+        <div class="goods-list-img">
+          <img src="../image/index-goods1.png" alt="">
+        </div>
+        <div class="goods-list-word">
+          <p class="goodsname">adidas 休闲运动鞋</p>
+          <p>
+            <span class="aui-pull-left goods-price">￥1299.00</span>
+            <i class="aui-pull-right aui-iconfont aui-icon-more price-more"></i>
+          </p>
+        </div>
+      </li>
+      <li>
+        <div class="goods-list-img">
+          <img src="../image/index-goods4.png" alt="">
+        </div>
+        <div class="goods-list-word">
+          <p class="goodsname">adidas 休闲运动鞋</p>
+          <p>
+            <span class="aui-pull-left goods-price">￥1299.00</span>
+            <i class="aui-pull-right aui-iconfont aui-icon-more price-more"></i>
+          </p>
+        </div>
+      </li>
+      <li>
+        <div class="goods-list-img">
+          <img src="../image/index-goods5.png" alt="">
+        </div>
+        <div class="goods-list-word">
+          <p class="goodsname">adidas 休闲运动鞋</p>
+          <p>
+            <span class="aui-pull-left goods-price">￥1299.00</span>
+            <i class="aui-pull-right aui-iconfont aui-icon-more price-more"></i>
+          </p>
+        </div>
+      </li>
+      <li>
+        <div class="goods-list-img">
+          <img src="../image/index-goods6.png" alt="">
+        </div>
+        <div class="goods-list-word">
+          <p class="goodsname">adidas 休闲运动鞋</p>
+          <p>
+            <span class="aui-pull-left goods-price">￥1299.00</span>
+            <i class="aui-pull-right aui-iconfont aui-icon-more price-more"></i>
+          </p>
+        </div>
+      </li>
+      <li>
+        <div class="goods-list-img">
+          <img src="../image/index-goods7.png" alt="">
+        </div>
+        <div class="goods-list-word">
+          <p class="goodsname">adidas 休闲运动鞋</p>
+          <p>
+            <span class="aui-pull-left goods-price">￥1299.00</span>
+            <i class="aui-pull-right aui-iconfont aui-icon-more price-more"></i>
+          </p>
+        </div>
+      </li>
+      <li>
+        <div class="goods-list-img">
+          <img src="../image/index-goods8.png" alt="">
+        </div>
+        <div class="goods-list-word">
+          <p class="goodsname">adidas 休闲运动鞋</p>
+          <p>
+            <span class="aui-pull-left goods-price">￥1299.00</span>
+            <i class="aui-pull-right aui-iconfont aui-icon-more price-more"></i>
+          </p>
+        </div>
+      </li>
+      <li>
+        <div class="goods-list-img">
+          <img src="../image/index-goods9.png" alt="">
+        </div>
+        <div class="goods-list-word">
+          <p class="goodsname">adidas 休闲运动鞋</p>
+          <p>
+            <span class="aui-pull-left goods-price">￥1299.00</span>
+            <i class="aui-pull-right aui-iconfont aui-icon-more price-more"></i>
+          </p>
+        </div>
+      </li>
+      <li>
+        <div class="goods-list-img">
+          <img src="../image/index-goods10.png" alt="">
+        </div>
+        <div class="goods-list-word">
+          <p class="goodsname">adidas 休闲运动鞋</p>
+          <p>
+            <span class="aui-pull-left goods-price">￥1299.00</span>
+            <i class="aui-pull-right aui-iconfont aui-icon-more price-more"></i>
+          </p>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+
+
+</body>
+
+
+<script src="../script/api.js" charset="utf-8"></script>
+<script src="../script/aui-slide.js" charset="utf-8"></script>
+<script src="../script/swiper-4.1.6.min.js" charset="utf-8"></script>
+<script src="../script/fastclick.js" charset="utf-8"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+        FastClick.attach(document.body);
+    }, false);
+
+apiready=function(){
+
+api.parseTapmode()
+
+  api.setRefreshHeaderInfo({
+    // loadingImg: 'widget://image/refresh.png',
+    bgColor: '#363636',
+    textColor: '#fff',
+    textDown: '下拉刷新...',
+    textLoading:'刷新中...',
+    showTime:true,
+    textUp: '松开刷新...'
+}, function(ret, err) {
+  api.refreshHeaderLoadDone()
+    //在这里从服务器加载数据，加载完成后调用api.refreshHeaderLoadDone()方法恢复组件到默认状态
+
+});
+}
+    var slide = new auiSlide({
+        container: document.getElementById("aui-slide"),
+        // "width":300,
+        "height": 256,
+        "speed": 500,
+        "autoPlay": 3000, //自动播放
+        "loop": true,
+        "pageShow": true,
+        "pageStyle": 'dot',
+        'dotPosition': 'center'
+    })
+
+
+    var slide2 = new auiSlide({
+        container: document.getElementById("aui-slide2"),
+        // "width":300,
+        "height": 256,
+        "speed": 500,
+        "autoPlay": 3000, //自动播放
+        "loop": true,
+        "pageShow": true,
+        "pageStyle": 'dot',
+        'dotPosition': 'center'
+    })
+
+    var mySwiper1 = new Swiper('#swiper-container1', {
+        // loop: false,
+        slidesPerView: 'auto',
+        freeMode : true,
+        // loopedSlides: 3,
+    })
+    var mySwiper2 = new Swiper('#swiper-container2', {
+        // loop: false,
+        slidesPerView: 'auto',
+        freeMode : true,
+        // loopedSlides: 3,
+    })
+
+    var mySwiper3 = new Swiper('#swiper-container3', {
+        // loop: false,
+        slidesPerView: 'auto',
+        freeMode : true,
+        // loopedSlides: 3,
+    })
+
+
+
+</script>
+
+</html>

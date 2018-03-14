@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title>3</title>
+      <link rel="stylesheet" href="../amazeui/css/amazeui.min.css">
+    <style>
+    body,html{
+      margin:0;
+      padding:0;
+    }
+    header{
+        height: 55px;
+        background-color: #363636;
+        text-align: center;
+        line-height: 55px;
+        font-size: 20px;
+        color:#fff;
+      }
+    .buycarimg{
+      height: 188px;
+      background-color: red;
+      background:url(../icon/buycar.png)45% bottom  no-repeat;
+      /*position: relative;*/
+    }
+    .buytip{
+      text-align: center;
+      padding-top:17px;
+      padding-bottom:32px;
+    }
+    .buytip p{
+      color:#000;
+    }
+    .buytip span{
+      color:#555;
+      display: block;
+      width: 61px;
+      height: 26px;
+      border:1px solid #494949;
+      margin:0 auto;
+      font-size: 10px;
+      line-height: 26px;
+      border-radius: 3px;
+    }
+    .youlike{
+      width:90%;
+      margin:0 5%;
+    }
+    .youlike p{
+      color:#4a4a4a;
+      margin:0;
+    }
+    .goods-img{
+      /*width: 155px;*/
+      height: 207px;
+    }
+    .goods-img img{
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+    .goodsname{
+      font-size: 16px;
+    color: #404040;
+    padding-top: 15px;
+    }
+    .goodsword{
+      overflow: hidden;
+    }
+    .buy-btn{
+      width: 35px;
+      height: 20px;
+      display: inline-block;
+      float:right;
+      background:url(../icon/buy-btn_03.png)center center no-repeat;
+      background-size: 100%;
+    }
+
+    </style>
+</head>
+<body>
+
+  <header>购物车</header>
+ <div class="buycarimg">
+
+ </div>
+ <div class="buytip">
+   <p>您的购物车暂无商品</p>
+    <span>随便逛逛</span>
+  </div>
+
+<div class="youlike">
+  <p>猜你喜欢</p>
+  <ul class="am-avg-sm-2 am-thumbnails">
+  <li>
+    <div class="goods-img">
+      <img src="../image/index-goods7.png" alt="">
+    </div>
+    <div class="goods-word">
+      <p class="goodsname">adidas 休闲运动鞋</p>
+      <p class="goodsword">
+        <span>￥1299.00</span>
+        <i class="buy-btn"></i>
+      </p>
+    </div>
+  </li>
+  <li>
+    <div class="goods-img">
+      <img src="../image/index-goods2.png" alt="">
+    </div>
+    <div class="goods-word">
+      <p class="goodsname">adidas 休闲运动鞋</p>
+      <p class="goodsword">
+        <span>￥1299.00</span>
+        <i class="buy-btn"></i>
+      </p>
+    </div>
+  </li>
+  <li>
+    <div class="goods-img">
+      <img src="../image/index-goods3.png" alt="">
+    </div>
+    <div class="goods-word">
+      <p class="goodsname">adidas 休闲运动鞋</p>
+      <p class="goodsword">
+        <span>￥1299.00</span>
+        <i class="buy-btn"></i>
+      </p>
+    </div>
+  </li>
+  <li>
+    <div class="goods-img">
+      <img src="../image/index-goods4.png" alt="">
+    </div>
+    <div class="goods-word">
+      <p class="goodsname">adidas 休闲运动鞋</p>
+      <p class="goodsword">
+        <span>￥1299.00</span>
+        <i class="buy-btn"></i>
+      </p>
+    </div>
+  </li>
+  <li>
+    <div class="goods-img">
+      <img src="../image/index-goods5.png" alt="">
+    </div>
+    <div class="goods-word">
+      <p class="goodsname">adidas 休闲运动鞋</p>
+      <p class="goodsword">
+        <span>￥1299.00</span>
+        <i class="buy-btn"></i>
+      </p>
+    </div>
+  </li>
+  <li>
+    <div class="goods-img">
+      <img src="../image/index-goods6.png" alt="">
+    </div>
+    <div class="goods-word">
+      <p class="goodsname">adidas 休闲运动鞋</p>
+      <p class="goodsword">
+        <span>￥1299.00</span>
+        <i class="buy-btn"></i>
+      </p>
+    </div>
+  </li>
+
+</ul>
+</div>
+</body>
+<script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="../script/api.js" charset="utf-8"></script>
+<script src="../amazeui/js/amazeui.min.js"></script>
+<script>
+  apiready= function(){
+
+
+    api.parseTapmode()
+
+      api.setRefreshHeaderInfo({
+        // loadingImg: 'widget://image/refresh.png',
+        bgColor: '#363636',
+        textColor: '#fff',
+        textDown: '下拉刷新...',
+        textLoading:'刷新中...',
+        showTime:true,
+        textUp: '松开刷新...'
+    }, function(ret, err) {
+      api.refreshHeaderLoadDone()
+        //在这里从服务器加载数据，加载完成后调用api.refreshHeaderLoadDone()方法恢复组件到默认状态
+
+    });
+    
+  }
+  function aaa(){
+    var wx = api.require('wx');
+    wx.shareText({
+        apiKey: '',
+        scene: 'timeline',
+        text: '我分享的文本'
+    }, function(ret, err) {
+        if (ret.status) {
+            alert('分享成功');
+        } else {
+            alert(err.code);
+        }
+    });
+
+
+  }
+</script>
+</html>

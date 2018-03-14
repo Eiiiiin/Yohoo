@@ -1,0 +1,1239 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0" />
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title>2</title>
+    <link rel="stylesheet" href="../amazeui/css/amazeui.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/swiper-4.1.6.min.css">
+    <style>
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul,
+        li {
+            list-style: none;
+        }
+        /*.am-tabs{
+      width:100%;
+      position: absolute;
+      top:-19px;
+    }*/
+
+        .top-icon {
+            position: absolute;
+            top: 10px;
+            left: 16px;
+            color: #fff;
+            width: 20px;
+            height: 20px;
+        }
+
+        .top-tab {
+            padding-left: 104px;
+            color: #fff;
+            background-color: #363636;
+        }
+
+        .am-nav-tabs {
+            border-bottom: 1px solid #b7b7b7;
+        }
+
+        .am-nav-tabs a {
+            color: #fff;
+        }
+
+        .am-nav-tabs>li.am-active>a,
+        .am-nav-tabs>li.am-active>a:focus,
+        .am-nav-tabs>li.am-active>a:hover {
+            border: none;
+            border-bottom: 4px solid #fff;
+            background-color: #363636;
+            color: #fff;
+        }
+
+        .am-nav>li>a:focus,
+        .am-nav>li>a:hover {
+            background-color: #3f3e3f;
+        }
+
+        .am-nav-tabs>li>a {
+            border: none;
+        }
+
+        .am-tabs-bd {
+            border: none;
+        }
+
+        .am-tabs-bd .am-tab-panel {
+            padding-left: 0;
+            padding-right: 0;
+        }
+
+        .tab-2 {
+            overflow: hidden;
+            position: relative;
+            padding: 0;
+            border-bottom: 1px solid #e6e6e6;
+            height: 37px;
+            margin: 0;
+        }
+
+        .tab-2 li {
+            float: left;
+            text-align: center;
+            color: #ababab;
+            font-size: 14px;
+        }
+
+        .tab-2-ab:before {
+            content: '';
+            width: 1px;
+            height: 20px;
+            background-color: #e6e5e6;
+            position: absolute;
+            left: 0;
+            top: 5px;
+        }
+
+        .tab-2-ab:after {
+            content: '';
+            width: 1px;
+            height: 20px;
+            background-color: #e6e5e6;
+            position: absolute;
+            right: 0;
+            top: 5px;
+        }
+
+        .tab-2-content {
+            display: none;
+        }
+
+        .tab-2-content-active {
+            display: block;
+            overflow: hidden;
+        }
+
+        .tab-2-active {
+            color: #3a3a3a!important;
+        }
+
+        .tab-3 {
+            overflow: hidden;
+            position: relative;
+            padding: 0;
+            border-bottom: 1px solid #e6e6e6;
+            height: 37px;
+            margin: 0;
+        }
+
+        .tab-3 li {
+            float: left;
+            text-align: center;
+            color: #ababab;
+            font-size: 14px;
+        }
+
+        .tab-3-ab:before {
+            content: '';
+            width: 1px;
+            height: 20px;
+            background-color: #e6e5e6;
+            position: absolute;
+            left: 0;
+            top: 5px;
+        }
+
+        .tab-3-ab:after {
+            content: '';
+            width: 1px;
+            height: 20px;
+            background-color: #e6e5e6;
+            position: absolute;
+            right: 0;
+            top: 5px;
+        }
+
+        .tab-3-content {
+            display: none;
+        }
+
+        .tab-3-content-active {
+            display: block;
+            overflow: hidden;
+        }
+
+        .tab-3-active {
+            color: #3a3a3a!important;
+        }
+
+        .goods-nav {
+            background-color: #f0f0f0;
+            padding: 0;
+        }
+
+        .goods-nav-active {
+            border-left: 4px solid #444;
+        }
+
+        .goods-list {
+            /*background-color: blue;*/
+            display: none;
+        }
+
+        .goods-list-active {
+            display: block;
+        }
+
+        #swiper-container1 {
+            overflow-y: scroll;
+        }
+
+        .swiper-slide {
+            border-bottom: 1px solid #fff;
+            text-align: center;
+            line-height: 60px;
+            color: #434343;
+        }
+
+        .goods-list-nav-box {
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .goods-list-nav {
+            /*display: block;
+          margin:0 auto;*/
+            color: #4a494a;
+            position: relative;
+            font-size: 14px;
+        }
+
+        .goods-list-nav:before {
+            content: '';
+            width: 14px;
+            height: 2px;
+            background-color: #141414;
+            position: absolute;
+            top: 50%;
+            left: -50%;
+        }
+
+        .goods-list-nav:after {
+            content: '';
+            width: 14px;
+            height: 2px;
+            background-color: #141414;
+            position: absolute;
+            top: 50%;
+            right: -50%;
+        }
+
+        .am-g {
+            padding-left: 0;
+        }
+
+        .am-u-sm-4 {
+            /*padding-left:5px!important;*/
+            padding: 5px!important;
+        }
+
+        .am-u-sm-4 img {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+        .pinpai-top{
+          width:90%;
+          margin:0 auto;
+          margin-top:6px;
+          position: relative;
+          padding:7px;
+
+        }
+        .pinpai-top i{
+          position: absolute;
+          left:13px;
+          top:9px;
+          color:#6e6e74;
+        }
+        .pinpai-top-input{
+          border-radius: 5px;
+          background-color: #f2f2f3;
+          border:none;
+          width: 100%;
+          height:25px;
+          padding-left:25px;
+          color:#6e6e74;
+        }
+        .am-slides img{
+          display: block;
+          width: 100%;
+          height: 100%;
+        }
+        .am-slider-default .am-control-nav{
+          bottom: 10px;
+          z-index:100;
+        }
+        .am-slider-default{
+          margin:0;
+          border-bottom:10px solid #f0f0f0;
+        }
+        .goods-fl-banner{
+          width:101px;
+          height:96px;
+          padding:20px;
+        }
+        .goods-fl-banner img{
+          display: block;
+          width:100%;
+          height:100%;
+        }
+        .fl-hot{
+          margin-top:14px;
+          margin-bottom: 20px;
+          text-align: center;
+          height:14px;
+          width:100%;
+          line-height: 14px;
+          font-weight: bold;
+        }
+        #swiper-container4{
+          margin-bottom: 50px;
+          border-bottom: 13px solid #f0f0f0;
+        }
+        .am-panel{
+          border:none;
+          margin-bottom:0;
+        }
+        .am-panel-hd{
+          padding:0 1.25rem;
+        }
+        .am-panel>.am-list-static li{
+          padding:0;
+          margin-left:5%;
+          margin-right:5%;
+        }
+
+        /*.am-list>li{
+          margin-bottom: 0;
+        }*/
+        .am-panel-default>.am-panel-hd{
+          height:26px;
+        }
+        .am-panel>.am-list-static li{
+          height:33px;
+        }
+        .am-list-static>li{
+          padding:0;
+          margin:.8rem .2rem;
+          margin-bottom:0;
+        }
+        .am-list>li{
+          border:none;
+          border-bottom: 1px solid #d2d2d2;
+        }
+        .am-list>li:nth-last-child{border:0}
+        .hot{
+          background-color: #c53b32;
+          color:#fff;
+          border-radius: 13px;
+          padding:0 6px;
+          margin-left:10px;
+        }
+        .tj-nav{
+          width:100%;
+        }
+        .tj-logo-name{
+          font-size: 16px;
+          font-weight: bolder;
+          color:#424242;
+          margin:.8rem 0;
+        }
+        .tj-logo-data{
+          color:#9b9b9b;
+          margin:0;
+        }
+        .tj-last-li{
+          padding-left:25px;
+          padding-top:20px;
+
+        }
+        .tj-box{
+          width: 47px;
+          height: 20px;
+          background-color: #f0a247;
+          color:#fff;
+          text-align: center;
+          line-height: 20px;
+          border-radius: 7px;
+          display: inline-block;
+        }
+        .tj-icon{
+          padding-left:15px;
+          color:#b0b0b0;
+        }
+        .tj-img-box{
+          /*width:170px;*/
+          height:160px;
+        }
+        .tj-img img{
+          display: block;
+          width: 100%;
+          height: 100%;
+        }
+        .tj-img-box-mid{
+          border-left: 1px solid #ededed;
+          border-right: 1px solid #ededed;
+        }
+        /*.mid-img{
+          border-left: 1px solid #ededed;
+          border-right: 1px solid #ededed;
+        }*/
+        .tj-img li p{
+          text-align: center;
+          color:#414141;
+          margin:0;
+          height:39px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="am-tabs" data-am-tabs="{noSwipe: 1}" id="doc-tab-demo-1">
+        <!-- <div class="am-icon-bars top-icon am-icon-sm"></div> -->
+        <ul class="am-tabs-nav am-nav am-nav-tabs top-tab ">
+            <i class="am-icon-bars top-icon am-icon-sm"></i>
+            <li class="am-active" tapmode><a href="javascript: void(0)">品类</a></li>
+            <li class="top-tab-ab" tapmode><a href="javascript: void(0)">品牌</a></li>
+            <li class=t apmode><a href="javascript: void(0)">关注</a></li>
+        </ul>
+
+        <div class="am-tabs-bd">
+            <div class="am-tab-panel am-active">
+                <ul class="tab-2">
+                    <li class="am-u-sm-4 tab-2-active">Men</li>
+                    <li class="am-u-sm-4 tab-2-ab">Women</li>
+                    <li class="am-u-sm-4">Kids</li>
+                </ul>
+                <!-- 二级选项卡 -->
+
+                <div class="tab-2-content tab-2-content-active">
+                    <div class="am-u-sm-3 goods-nav">
+                        <div class="swiper-container" id="swiper-container1">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide swiper-slide1 goods-nav-active">上衣</div>
+                                <div class="swiper-slide swiper-slide1">裤装</div>
+                                <div class="swiper-slide swiper-slide1">鞋靴</div>
+                                <div class="swiper-slide swiper-slide1">包类</div>
+                                <div class="swiper-slide swiper-slide1">服配</div>
+                                <div class="swiper-slide swiper-slide1">数码3C</div>
+                                <div class="swiper-slide swiper-slide1">玩具礼品</div>
+                                <div class="swiper-slide swiper-slide1">美妆/个护</div>
+                                <div class="swiper-slide swiper-slide1">内衣/家居服</div>
+
+                            </div>
+                            <div class="swiper-scrollbar"></div>
+                        </div>
+                    </div>
+                    <div class="am-u-sm-9 goods-list goods-list-active">
+                        <div class="goods-list-nav-box">
+                            <span class="goods-list-nav">全部上衣</span>
+                        </div>
+                        <ul class="am-g">
+                            <li class="am-u-sm-4"><img src="../fl-image/boy-sy1.png" alt=""></li>
+                            <li class="am-u-sm-4"><img src="../fl-image/boy-sy2.png" alt=""></li>
+                            <li class="am-u-sm-4"><img src="../fl-image/boy-sy3.png" alt=""></li>
+                            <li class="am-u-sm-4"><img src="../fl-image/boy-sy4.png" alt=""></li>
+                            <li class="am-u-sm-4"><img src="../fl-image/boy-sy5.png" alt=""></li>
+                            <li class="am-u-sm-4"><img src="../fl-image/boy-sy6.png" alt=""></li>
+                            <li class="am-u-sm-4"><img src="../fl-image/boy-sy7.png" alt=""></li>
+                            <li class="am-u-sm-4"><img src="../fl-image/boy-sy8.png" alt=""></li>
+                            <li class="am-u-sm-4"><img src="../fl-image/boy-sy9.png" alt=""></li>
+                            <li class="am-u-sm-4"><img src="../fl-image/boy-sy10.png" alt=""></li>
+                            <li class="am-u-sm-4"><img src="../fl-image/boy-sy11.png" alt=""></li>
+                            <li class="am-u-sm-4"><img src="../fl-image/boy-sy12.png" alt=""></li>
+                        </ul>
+                    </div>
+                    <div class="am-u-sm-9 goods-list">
+                        <div class="goods-list-nav-box">
+                            <span class="goods-list-nav">全部裤装</span>
+                        </div>
+                        <ul class="am-g">
+                            <li class="am-u-sm-4"><img src="../fl-image/boy-kz_03.png" alt=""></li>
+                            <li class="am-u-sm-4"><img src="../fl-image/boy-kz_05.png" alt=""></li>
+                            <li class="am-u-sm-4"><img src="../fl-image/boy-kz_07.png" alt=""></li>
+                            <li class="am-u-sm-4"><img src="../fl-image/boy-kz_12.png" alt=""></li>
+                            <li class="am-u-sm-4"><img src="../fl-image/boy-kz_13.png" alt=""></li>
+                            <li class="am-u-sm-4"><img src="../fl-image/boy-kz_14.png" alt=""></li>
+                        </ul>
+                    </div>
+                    <div class="am-u-sm-9 goods-list">
+                        <div class="goods-list-nav-box">
+                            <span class="goods-list-nav">全部鞋靴</span>
+                        </div>
+                        <ul class="am-g">
+                            <li class="am-u-sm-4"><img src="../fl-image/boy-xx_03.png" alt=""></li>
+                            <li class="am-u-sm-4"><img src="../fl-image/boy-xx_05.png" alt=""></li>
+                            <li class="am-u-sm-4"><img src="../fl-image/boy-xx_07.png" alt=""></li>
+                            <li class="am-u-sm-4"><img src="../fl-image/boy-xx_12.png" alt=""></li>
+                            <li class="am-u-sm-4"><img src="../fl-image/boy-xx_13.png" alt=""></li>
+                            <li class="am-u-sm-4"><img src="../fl-image/boy-xx_14.png" alt=""></li>
+                        </ul>
+                    </div>
+                    <div class="am-u-sm-9 goods-list">
+                        <div class="goods-list-nav-box">
+                            <span class="goods-list-nav">全部包类</span>
+                        </div>
+                        <ul class="am-g">
+                            <li class="am-u-sm-4"><img src="../fl-image/boy-bl_03.png" alt=""></li>
+                            <li class="am-u-sm-4"><img src="../fl-image/boy-bl_05.png" alt=""></li>
+                            <li class="am-u-sm-4"><img src="../fl-image/boy-bl_07.png" alt=""></li>
+                            <li class="am-u-sm-4"><img src="../fl-image/boy-bl_12.png" alt=""></li>
+                            <li class="am-u-sm-4"><img src="../fl-image/boy-bl_13.png" alt=""></li>
+                            <li class="am-u-sm-4"><img src="../fl-image/boy-bl_14.png" alt=""></li>
+                            <li class="am-u-sm-4"><img src="../fl-image/boy-bl_18.png" alt=""></li>
+                            <li class="am-u-sm-4"><img src="../fl-image/boy-bl_19.png" alt=""></li>
+                            <li class="am-u-sm-4"><img src="../fl-image/boy-bl_20.png" alt=""></li>
+                            <li class="am-u-sm-4"><img src="../fl-image/boy-bl_24.png" alt=""></li>
+                            <li class="am-u-sm-4"><img src="../fl-image/boy-bl_25.png" alt=""></li>
+                            <li class="am-u-sm-4"><img src="../fl-image/boy-bl_26.png" alt=""></li>
+                        </ul>
+                    </div>
+                    <div class="am-u-sm-9 goods-list">
+                        <div class="goods-list-nav-box">
+                            <span class="goods-list-nav">全部服配</span>
+                        </div>
+                        <ul class="am-g">
+                            <li class="am-u-sm-4"><img src="../fl-image/boy-fp_12.png" alt=""></li>
+                            <li class="am-u-sm-4"><img src="../fl-image/boy-fp_13.png" alt=""></li>
+                            <li class="am-u-sm-4"><img src="../fl-image/boy-fp_14.png" alt=""></li>
+                            <li class="am-u-sm-4"><img src="../fl-image/boy-fp_18.png" alt=""></li>
+                            <li class="am-u-sm-4"><img src="../fl-image/boy-fp_19.png" alt=""></li>
+                            <li class="am-u-sm-4"><img src="../fl-image/boy-fp_20.png" alt=""></li>
+                        </ul>
+                    </div>
+                    <div class="am-u-sm-9 goods-list">
+                        <div class="goods-list-nav-box">
+                            <span class="goods-list-nav">全部数码3c</span>
+                        </div>
+                        <ul class="am-g">
+                            <li class="am-u-sm-4"><img src="../fl-image/boy-3c_03.png" alt=""></li>
+                            <li class="am-u-sm-4"><img src="../fl-image/boy-3c_05.png" alt=""></li>
+                            <li class="am-u-sm-4"><img src="../fl-image/boy-3c_07.png" alt=""></li>
+                            <li class="am-u-sm-4 am-u-end"><img src="../fl-image/boy-3c_12.png" alt=""></li>
+                        </ul>
+                    </div>
+                    <div class="am-u-sm-9 goods-list">
+                        <div class="goods-list-nav-box">
+                            <span class="goods-list-nav">全部玩具礼品</span>
+                        </div>
+                        <ul class="am-g">
+                            <li class="am-u-sm-4"><img src="../fl-image/boy-wj_03.png" alt=""></li>
+                            <li class="am-u-sm-4"><img src="../fl-image/boy-wj_05.png" alt=""></li>
+                            <li class="am-u-sm-4"><img src="../fl-image/boy-wj_07.png" alt=""></li>
+                            <li class="am-u-sm-4 am-u-end"><img src="../fl-image/boy-wj_12.png" alt=""></li>
+                        </ul>
+                    </div>
+                    <div class="am-u-sm-9 goods-list">
+                        <div class="goods-list-nav-box">
+                            <span class="goods-list-nav">全部美妆/个护</span>
+                        </div>
+                        <ul class="am-g ">
+                            <li class="am-u-sm-4"><img src="../fl-image/boy-mz_03.png" alt=""></li>
+                            <li class="am-u-sm-4"><img src="../fl-image/boy-mz_05.png" alt=""></li>
+                            <li class="am-u-sm-4"><img src="../fl-image/boy-mz_07.png" alt=""></li>
+                            <li class="am-u-sm-4 am-u-end"><img src="../fl-image/boy-mz_12.png" alt=""></li>
+                        </ul>
+                    </div>
+                    <div class="am-u-sm-9 goods-list">
+                        <div class="goods-list-nav-box">
+                            <span class="goods-list-nav">全部内衣/家居服</span>
+                        </div>
+                        <ul class="am-g02">
+                            <li class="am-u-sm-4"><img src="../fl-image/boy-ny_03.png" alt=""></li>
+                            <li class="am-u-sm-4 am-u-end"><img src="../fl-image/boy-ny_05.png" alt=""></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="tab-2-content">
+                    <div class="am-u-sm-3 goods-nav">
+                        <div class="swiper-container" id="swiper-container2">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide swiper-slide2 goods-nav-active">上衣</div>
+                                <div class="swiper-slide swiper-slide2">裤装</div>
+                                <div class="swiper-slide swiper-slide2">鞋靴</div>
+                                <div class="swiper-slide swiper-slide2">裙装</div>
+                                <div class="swiper-slide swiper-slide2">包类</div>
+                                <div class="swiper-slide swiper-slide2">服配</div>
+                                <div class="swiper-slide swiper-slide2">数码3C</div>
+                                <div class="swiper-slide swiper-slide2">玩具礼品</div>
+                                <div class="swiper-slide swiper-slide2">美妆/个护</div>
+                                <div class="swiper-slide swiper-slide2">内衣/家居服</div>
+
+                            </div>
+                            <div class="swiper-scrollbar"></div>
+                        </div>
+                    </div>
+                    <div class="am-u-sm-9 goods-list goods-list2 goods-list-active">
+                        <div class="goods-list-nav-box">
+                            <span class="goods-list-nav">全部上衣</span>
+                        </div>
+                        <ul class="am-g">
+                            <li class="am-u-sm-4"><img src="../fl-image/girl-sy_03.png" alt=""></li>
+                            <li class="am-u-sm-4"><img src="../fl-image/girl-sy_05.png" alt=""></li>
+                            <li class="am-u-sm-4"><img src="../fl-image/girl-sy_07.png" alt=""></li>
+                            <li class="am-u-sm-4"><img src="../fl-image/girl-sy_12.png" alt=""></li>
+                            <li class="am-u-sm-4"><img src="../fl-image/girl-sy_13.png" alt=""></li>
+                            <li class="am-u-sm-4"><img src="../fl-image/girl-sy_14.png" alt=""></li>
+                            <li class="am-u-sm-4"><img src="../fl-image/girl-sy_18.png" alt=""></li>
+                            <li class="am-u-sm-4"><img src="../fl-image/girl-sy_19.png" alt=""></li>
+                            <li class="am-u-sm-4"><img src="../fl-image/girl-sy_20.png" alt=""></li>
+                            <li class="am-u-sm-4"><img src="../fl-image/girl-sy_24.png" alt=""></li>
+                            <li class="am-u-sm-4"><img src="../fl-image/girl-sy_25.png" alt=""></li>
+                            <li class="am-u-sm-4"><img src="../fl-image/girl-sy_26.png" alt=""></li>
+                        </ul>
+                    </div>
+                    <div class="am-u-sm-9 goods-list goods-list2">
+                        <div class="goods-list-nav-box">
+                            <span class="goods-list-nav">全部裤装</span>
+                        </div>
+                        <ul class="am-g">
+                            <li class="am-u-sm-4"><img src="../fl-image/girl-kz_03.png" alt=""></li>
+                            <li class="am-u-sm-4"><img src="../fl-image/girl-kz_05.png" alt=""></li>
+                            <li class="am-u-sm-4"><img src="../fl-image/girl-kz_07.png" alt=""></li>
+                            <li class="am-u-sm-4"><img src="../fl-image/girl-kz_12.png" alt=""></li>
+                            <li class="am-u-sm-4"><img src="../fl-image/girl-kz_13.png" alt=""></li>
+                            <li class="am-u-sm-4"><img src="../fl-image/girl-kz_14.png" alt=""></li>
+                            <li class="am-u-sm-4 am-u-end"><img src="../fl-image/girl-kz_18.png" alt=""></li>
+                        </ul>
+                    </div>
+                    <div class="am-u-sm-9 goods-list goods-list2">
+                        <div class="goods-list-nav-box">
+                            <span class="goods-list-nav">全部鞋靴</span>
+                        </div>
+                        <ul class="am-g">
+                            <li class="am-u-sm-4"><img src="../fl-image/girl-xx_03.png" alt=""></li>
+                            <li class="am-u-sm-4"><img src="../fl-image/girl-xx_05.png" alt=""></li>
+                            <li class="am-u-sm-4"><img src="../fl-image/girl-xx_07.png" alt=""></li>
+                            <li class="am-u-sm-4"><img src="../fl-image/girl-xx_12.png" alt=""></li>
+                            <li class="am-u-sm-4 am-u-end"><img src="../fl-image/girl-xx_13.png" alt=""></li>
+                        </ul>
+                    </div>
+                    <div class="am-u-sm-9 goods-list goods-list2">
+                        <div class="goods-list-nav-box">
+                            <span class="goods-list-nav">全部裙装</span>
+                        </div>
+                        <ul class="am-g">
+                            <li class="am-u-sm-4"><img src="../fl-image/girl-qz_03.png" alt=""></li>
+                            <li class="am-u-sm-4"><img src="../fl-image/girl-qz_05.png" alt=""></li>
+                            <li class="am-u-sm-4"><img src="../fl-image/girl-qz_07.png" alt=""></li>
+                            <li class="am-u-sm-4"><img src="../fl-image/girl-qz_12.png" alt=""></li>
+                            <li class="am-u-sm-4"><img src="../fl-image/girl-qz_13.png" alt=""></li>
+                            <li class="am-u-sm-4"><img src="../fl-image/girl-qz_14.png" alt=""></li>
+                            <li class="am-u-sm-4 am-u-end"><img src="../fl-image/girl-qz_18.png" alt=""></li>
+                        </ul>
+                    </div>
+                    <div class="am-u-sm-9 goods-list goods-list2">
+                        <div class="goods-list-nav-box">
+                            <span class="goods-list-nav">全部包类</span>
+                        </div>
+                        <ul class="am-g">
+                            <li class="am-u-sm-4"><img src="../fl-image/boy-bl_03.png" alt=""></li>
+                            <li class="am-u-sm-4"><img src="../fl-image/boy-bl_05.png" alt=""></li>
+                            <li class="am-u-sm-4"><img src="../fl-image/boy-bl_07.png" alt=""></li>
+                            <li class="am-u-sm-4"><img src="../fl-image/boy-bl_12.png" alt=""></li>
+                            <li class="am-u-sm-4"><img src="../fl-image/boy-bl_13.png" alt=""></li>
+                            <li class="am-u-sm-4"><img src="../fl-image/boy-bl_14.png" alt=""></li>
+                            <li class="am-u-sm-4"><img src="../fl-image/boy-bl_18.png" alt=""></li>
+                            <li class="am-u-sm-4"><img src="../fl-image/boy-bl_19.png" alt=""></li>
+                            <li class="am-u-sm-4"><img src="../fl-image/boy-bl_20.png" alt=""></li>
+                            <li class="am-u-sm-4"><img src="../fl-image/boy-bl_24.png" alt=""></li>
+                            <li class="am-u-sm-4"><img src="../fl-image/boy-bl_25.png" alt=""></li>
+                            <li class="am-u-sm-4"><img src="../fl-image/boy-bl_26.png" alt=""></li>
+                        </ul>
+                    </div>
+                    <div class="am-u-sm-9 goods-list goods-list2">
+                        <div class="goods-list-nav-box">
+                            <span class="goods-list-nav">全部服配</span>
+                        </div>
+                        <ul class="am-g">
+                            <li class="am-u-sm-4"><img src="../fl-image/boy-fp_12.png" alt=""></li>
+                            <li class="am-u-sm-4"><img src="../fl-image/boy-fp_13.png" alt=""></li>
+                            <li class="am-u-sm-4"><img src="../fl-image/boy-fp_14.png" alt=""></li>
+                            <li class="am-u-sm-4"><img src="../fl-image/boy-fp_18.png" alt=""></li>
+                            <li class="am-u-sm-4"><img src="../fl-image/boy-fp_19.png" alt=""></li>
+                            <li class="am-u-sm-4"><img src="../fl-image/boy-fp_20.png" alt=""></li>
+                        </ul>
+                    </div>
+                    <div class="am-u-sm-9 goods-list goods-list2">
+                        <div class="goods-list-nav-box">
+                            <span class="goods-list-nav">全部数码3c</span>
+                        </div>
+                        <ul class="am-g">
+                            <li class="am-u-sm-4"><img src="../fl-image/boy-3c_03.png" alt=""></li>
+                            <li class="am-u-sm-4"><img src="../fl-image/boy-3c_05.png" alt=""></li>
+                            <li class="am-u-sm-4"><img src="../fl-image/boy-3c_07.png" alt=""></li>
+                            <li class="am-u-sm-4 am-u-end"><img src="../fl-image/boy-3c_12.png" alt=""></li>
+                        </ul>
+                    </div>
+                    <div class="am-u-sm-9 goods-list goods-list2">
+                        <div class="goods-list-nav-box">
+                            <span class="goods-list-nav">全部玩具礼品</span>
+                        </div>
+                        <ul class="am-g">
+                            <li class="am-u-sm-4"><img src="../fl-image/boy-wj_03.png" alt=""></li>
+                            <li class="am-u-sm-4"><img src="../fl-image/boy-wj_05.png" alt=""></li>
+                            <li class="am-u-sm-4"><img src="../fl-image/boy-wj_07.png" alt=""></li>
+                            <li class="am-u-sm-4 am-u-end"><img src="../fl-image/boy-wj_12.png" alt=""></li>
+                        </ul>
+                    </div>
+                    <div class="am-u-sm-9 goods-list goods-list2">
+                        <div class="goods-list-nav-box">
+                            <span class="goods-list-nav">全部美妆/个护</span>
+                        </div>
+                        <ul class="am-g ">
+                            <li class="am-u-sm-4"><img src="../fl-image/boy-mz_03.png" alt=""></li>
+                            <li class="am-u-sm-4"><img src="../fl-image/boy-mz_05.png" alt=""></li>
+                            <li class="am-u-sm-4"><img src="../fl-image/boy-mz_07.png" alt=""></li>
+                            <li class="am-u-sm-4 am-u-end"><img src="../fl-image/boy-mz_12.png" alt=""></li>
+                        </ul>
+                    </div>
+                    <div class="am-u-sm-9 goods-list goods-list2">
+                        <div class="goods-list-nav-box">
+                            <span class="goods-list-nav">全部内衣/家居服</span>
+                        </div>
+                        <ul class="am-g02">
+                            <li class="am-u-sm-4"><img src="../fl-image/boy-ny_03.png" alt=""></li>
+                            <li class="am-u-sm-4 am-u-end"><img src="../fl-image/boy-ny_05.png" alt=""></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="tab-2-content">
+                    <div class="am-u-sm-3 goods-nav">
+                        <div class="swiper-container" id="swiper-container3">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide swiper-slide3 goods-nav-active">上衣</div>
+                                <div class="swiper-slide swiper-slide3">裤装</div>
+                                <div class="swiper-slide swiper-slide3">鞋靴</div>
+                                <div class="swiper-slide swiper-slide3">包类</div>
+                                <div class="swiper-slide swiper-slide3">服配</div>
+                                <div class="swiper-slide swiper-slide3">数码3C</div>
+                                <div class="swiper-slide swiper-slide3">玩具礼品</div>
+                                <div class="swiper-slide swiper-slide3">美妆/个护</div>
+                                <div class="swiper-slide swiper-slide3">内衣/家居服</div>
+
+                            </div>
+                            <div class="swiper-scrollbar"></div>
+                        </div>
+                    </div>
+                    <div class="am-u-sm-9 goods-list goods-list3 goods-list-active">
+                        <div class="goods-list-nav-box">
+                            <span class="goods-list-nav">全部上衣</span>
+                        </div>
+                        <ul class="am-g">
+                            <li class="am-u-sm-4"><img src="../fl-image/boy-sy1.png" alt=""></li>
+                            <li class="am-u-sm-4"><img src="../fl-image/boy-sy2.png" alt=""></li>
+                            <li class="am-u-sm-4"><img src="../fl-image/boy-sy3.png" alt=""></li>
+                            <li class="am-u-sm-4"><img src="../fl-image/boy-sy4.png" alt=""></li>
+                            <li class="am-u-sm-4"><img src="../fl-image/boy-sy5.png" alt=""></li>
+                            <li class="am-u-sm-4"><img src="../fl-image/boy-sy6.png" alt=""></li>
+                            <li class="am-u-sm-4"><img src="../fl-image/boy-sy7.png" alt=""></li>
+                            <li class="am-u-sm-4"><img src="../fl-image/boy-sy8.png" alt=""></li>
+                            <li class="am-u-sm-4"><img src="../fl-image/boy-sy9.png" alt=""></li>
+                            <li class="am-u-sm-4"><img src="../fl-image/boy-sy10.png" alt=""></li>
+                            <li class="am-u-sm-4"><img src="../fl-image/boy-sy11.png" alt=""></li>
+                            <li class="am-u-sm-4"><img src="../fl-image/boy-sy12.png" alt=""></li>
+                        </ul>
+                    </div>
+                    <div class="am-u-sm-9 goods-list goods-list3">
+                        <div class="goods-list-nav-box">
+                            <span class="goods-list-nav">全部裤装</span>
+                        </div>
+                        <ul class="am-g">
+                            <li class="am-u-sm-4"><img src="../fl-image/boy-kz_03.png" alt=""></li>
+                            <li class="am-u-sm-4"><img src="../fl-image/boy-kz_05.png" alt=""></li>
+                            <li class="am-u-sm-4"><img src="../fl-image/boy-kz_07.png" alt=""></li>
+                            <li class="am-u-sm-4"><img src="../fl-image/boy-kz_12.png" alt=""></li>
+                            <li class="am-u-sm-4"><img src="../fl-image/boy-kz_13.png" alt=""></li>
+                            <li class="am-u-sm-4"><img src="../fl-image/boy-kz_14.png" alt=""></li>
+                        </ul>
+                    </div>
+                    <div class="am-u-sm-9 goods-list goods-list3">
+                        <div class="goods-list-nav-box">
+                            <span class="goods-list-nav">全部鞋靴</span>
+                        </div>
+                        <ul class="am-g">
+                            <li class="am-u-sm-4"><img src="../fl-image/boy-xx_03.png" alt=""></li>
+                            <li class="am-u-sm-4"><img src="../fl-image/boy-xx_05.png" alt=""></li>
+                            <li class="am-u-sm-4"><img src="../fl-image/boy-xx_07.png" alt=""></li>
+                            <li class="am-u-sm-4"><img src="../fl-image/boy-xx_12.png" alt=""></li>
+                            <li class="am-u-sm-4"><img src="../fl-image/boy-xx_13.png" alt=""></li>
+                            <li class="am-u-sm-4"><img src="../fl-image/boy-xx_14.png" alt=""></li>
+                        </ul>
+                    </div>
+                    <div class="am-u-sm-9 goods-list goods-list3">
+                        <div class="goods-list-nav-box">
+                            <span class="goods-list-nav">全部包类</span>
+                        </div>
+                        <ul class="am-g">
+                            <li class="am-u-sm-4"><img src="../fl-image/boy-bl_03.png" alt=""></li>
+                            <li class="am-u-sm-4"><img src="../fl-image/boy-bl_05.png" alt=""></li>
+                            <li class="am-u-sm-4"><img src="../fl-image/boy-bl_07.png" alt=""></li>
+                            <li class="am-u-sm-4"><img src="../fl-image/boy-bl_12.png" alt=""></li>
+                            <li class="am-u-sm-4"><img src="../fl-image/boy-bl_13.png" alt=""></li>
+                            <li class="am-u-sm-4"><img src="../fl-image/boy-bl_14.png" alt=""></li>
+                            <li class="am-u-sm-4"><img src="../fl-image/boy-bl_18.png" alt=""></li>
+                            <li class="am-u-sm-4"><img src="../fl-image/boy-bl_19.png" alt=""></li>
+                            <li class="am-u-sm-4"><img src="../fl-image/boy-bl_20.png" alt=""></li>
+                            <li class="am-u-sm-4"><img src="../fl-image/boy-bl_24.png" alt=""></li>
+                            <li class="am-u-sm-4"><img src="../fl-image/boy-bl_25.png" alt=""></li>
+                            <li class="am-u-sm-4"><img src="../fl-image/boy-bl_26.png" alt=""></li>
+                        </ul>
+                    </div>
+                    <div class="am-u-sm-9 goods-list goods-list3">
+                        <div class="goods-list-nav-box">
+                            <span class="goods-list-nav">全部服配</span>
+                        </div>
+                        <ul class="am-g">
+                            <li class="am-u-sm-4"><img src="../fl-image/boy-fp_12.png" alt=""></li>
+                            <li class="am-u-sm-4"><img src="../fl-image/boy-fp_13.png" alt=""></li>
+                            <li class="am-u-sm-4"><img src="../fl-image/boy-fp_14.png" alt=""></li>
+                            <li class="am-u-sm-4"><img src="../fl-image/boy-fp_18.png" alt=""></li>
+                            <li class="am-u-sm-4"><img src="../fl-image/boy-fp_19.png" alt=""></li>
+                            <li class="am-u-sm-4"><img src="../fl-image/boy-fp_20.png" alt=""></li>
+                        </ul>
+                    </div>
+                    <div class="am-u-sm-9 goods-list goods-list3">
+                        <div class="goods-list-nav-box">
+                            <span class="goods-list-nav">全部数码3c</span>
+                        </div>
+                        <ul class="am-g">
+                            <li class="am-u-sm-4"><img src="../fl-image/boy-3c_03.png" alt=""></li>
+                            <li class="am-u-sm-4"><img src="../fl-image/boy-3c_05.png" alt=""></li>
+                            <li class="am-u-sm-4"><img src="../fl-image/boy-3c_07.png" alt=""></li>
+                            <li class="am-u-sm-4 am-u-end"><img src="../fl-image/boy-3c_12.png" alt=""></li>
+                        </ul>
+                    </div>
+                    <div class="am-u-sm-9 goods-list goods-list3">
+                        <div class="goods-list-nav-box">
+                            <span class="goods-list-nav">全部玩具礼品</span>
+                        </div>
+                        <ul class="am-g">
+                            <li class="am-u-sm-4"><img src="../fl-image/boy-wj_03.png" alt=""></li>
+                            <li class="am-u-sm-4"><img src="../fl-image/boy-wj_05.png" alt=""></li>
+                            <li class="am-u-sm-4"><img src="../fl-image/boy-wj_07.png" alt=""></li>
+                            <li class="am-u-sm-4 am-u-end"><img src="../fl-image/boy-wj_12.png" alt=""></li>
+                        </ul>
+                    </div>
+                    <div class="am-u-sm-9 goods-list goods-list3">
+                        <div class="goods-list-nav-box">
+                            <span class="goods-list-nav">全部美妆/个护</span>
+                        </div>
+                        <ul class="am-g ">
+                            <li class="am-u-sm-4"><img src="../fl-image/boy-mz_03.png" alt=""></li>
+                            <li class="am-u-sm-4"><img src="../fl-image/boy-mz_05.png" alt=""></li>
+                            <li class="am-u-sm-4"><img src="../fl-image/boy-mz_07.png" alt=""></li>
+                            <li class="am-u-sm-4 am-u-end"><img src="../fl-image/boy-mz_12.png" alt=""></li>
+                        </ul>
+                    </div>
+                    <div class="am-u-sm-9 goods-list goods-list3">
+                        <div class="goods-list-nav-box">
+                            <span class="goods-list-nav">全部内衣/家居服</span>
+                        </div>
+                        <ul class="am-g02">
+                            <li class="am-u-sm-4"><img src="../fl-image/boy-ny_03.png" alt=""></li>
+                            <li class="am-u-sm-4 am-u-end"><img src="../fl-image/boy-ny_05.png" alt=""></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- 二级选项卡下 三级选项卡结束 -->
+            </div>
+            <!-- 二级选项卡结束 -->
+            <div class="am-tab-panel">
+                <ul class="tab-3">
+                    <li class="am-u-sm-4 tab-3-active">Men</li>
+                    <li class="am-u-sm-4 tab-3-ab">Women</li>
+                    <li class="am-u-sm-4">Kids</li>
+                </ul>
+                <div class="tab-3-content tab-3-content-active">
+                    <div class="pinpai-top">
+                      <i class="am-icon-search"></i>
+                      <div><input class="pinpai-top-input" type="text" placeholder="搜索品牌"></div>
+                    </div>
+                    <div class="am-slider am-slider-default" data-am-flexslider id="demo-slider-0">
+                      <ul class="am-slides">
+                        <li><img src="../fl-image/pinpai-banner-boy1.png" /></li>
+                        <li><img src="../fl-image/pinpai-banner-girl_02.png" /></li>
+                        <li><img src="../fl-image/pinpai-banner-kid.png" /></li>
+                      </ul>
+                    </div>
+                    <!-- 三层顶头轮播图 -->
+                    <div class="fl-hot"><span>热门品牌</span></div>
+                      <div class="swiper-container" id="swiper-container4">
+                          <div class="swiper-wrapper">
+                              <div class="swiper-slide goods-fl-banner"><img src="../fl-image/goods-fl-banner_02.png" alt=""></div>
+                              <div class="swiper-slide goods-fl-banner"><img src="../fl-image/goods-fl-banner_04.png" alt=""></div>
+                              <div class="swiper-slide goods-fl-banner"><img src="../fl-image/goods-fl-banner_06.png" alt=""></div>
+                              <div class="swiper-slide goods-fl-banner"><img src="../fl-image/goods-fl-banner_08.png" alt=""></div>
+                              <div class="swiper-slide goods-fl-banner"><img src="../fl-image/goods-fl-banner_10.png" alt=""></div>
+                              <div class="swiper-slide goods-fl-banner"><img src="../fl-image/goods-fl-banner_02.png" alt=""></div>
+                              <div class="swiper-slide goods-fl-banner"><img src="../fl-image/goods-fl-banner_04.png" alt=""></div>
+                              <div class="swiper-slide goods-fl-banner"><img src="../fl-image/goods-fl-banner_06.png" alt=""></div>
+                              <div class="swiper-slide goods-fl-banner"><img src="../fl-image/goods-fl-banner_08.png" alt=""></div>
+                              <div class="swiper-slide goods-fl-banner"><img src="../fl-image/goods-fl-banner_10.png" alt=""></div>
+                          </div>
+                      </div>
+                      <!-- 三层小图片轮播 -->
+
+                      <div class="am-panel am-panel-default">
+                        <div class="am-panel-hd">
+                          <h3 class="am-panel-title">A</h3>
+                        </div>
+                        <ul class="am-list am-list-static">
+                          <li>Airhole</li>
+                          <li>AIRNUM</li>
+                          <li>AKOP.<span class="hot">HOT</span></li>
+                        </ul>
+                      </div>
+                      <div class="am-panel am-panel-default">
+                        <div class="am-panel-hd">
+                          <h3 class="am-panel-title">B</h3>
+                        </div>
+                        <ul class="am-list am-list-static">
+                          <li>BABAMA<span class="hot">HOT</span></li>
+                          <li>badyONE</li>
+                          <li>B.Duck</li>
+                          <li>Boboli</li>
+                        </ul>
+                      </div>
+                      <div class="am-panel am-panel-default">
+                        <div class="am-panel-hd">
+                          <h3 class="am-panel-title">C</h3>
+                        </div>
+                        <ul class="am-list am-list-static">
+                          <li>:CHOCOOLATE<span class="hot">HOT</span></li>
+                          <li>CHUMS</li>
+                          <li>CHUMS Kids<span class="hot">HOT</span></li>
+                          <li>Coastal Vison镜宴</li>
+                          <li>COOⅢ絝逸<span class="hot">HOT</span></li>
+                          <li>Creamsoda</li>
+                        </ul>
+                      </div>
+                      <div class="am-panel am-panel-default">
+                        <div class="am-panel-hd">
+                          <h3 class="am-panel-title">D</h3>
+                        </div>
+                        <ul class="am-list am-list-static">
+                          <li>DC KIDS<span class="hot">HOT</span></li>
+                          <li>Dickis</li>
+                          <li>DISITU 迪斯兔<span class="hot">HOT</span></li>
+                          <li>dress lab</li>
+                          <li>Dr.Martens KIDS<span class="hot">HOT</span></li>
+                        </ul>
+                      </div>
+                </div>
+                <div class="tab-3-content">
+                  <div class="pinpai-top">
+                    <i class="am-icon-search"></i>
+                    <div><input class="pinpai-top-input" type="text" placeholder="搜索品牌"></div>
+                  </div>
+                  <div class="am-slider am-slider-default" data-am-flexslider id="demo-slider-0">
+                    <ul class="am-slides">
+                      <li><img src="../fl-image/pinpai-banner-girl_02.png" /></li>
+                      <li><img src="../fl-image/pinpai-banner-girl_02.png" /></li>
+                      <li><img src="../fl-image/pinpai-banner-kid.png" /></li>
+                    </ul>
+                  </div>
+                  <!-- 三层顶头轮播图 -->
+                  <div class="fl-hot"><span>热门品牌</span></div>
+                    <!-- 三层小图片轮播 -->
+
+                    <div class="am-panel am-panel-default">
+                      <div class="am-panel-hd">
+                        <h3 class="am-panel-title">A</h3>
+                      </div>
+                      <ul class="am-list am-list-static">
+                        <li>Airhole</li>
+                        <li>AIRNUM</li>
+                        <li>AKOP.<span class="hot">HOT</span></li>
+                      </ul>
+                    </div>
+                    <div class="am-panel am-panel-default">
+                      <div class="am-panel-hd">
+                        <h3 class="am-panel-title">B</h3>
+                      </div>
+                      <ul class="am-list am-list-static">
+                        <li>BABAMA<span class="hot">HOT</span></li>
+                        <li>badyONE</li>
+                        <li>B.Duck</li>
+                        <li>Boboli</li>
+                      </ul>
+                    </div>
+                    <div class="am-panel am-panel-default">
+                      <div class="am-panel-hd">
+                        <h3 class="am-panel-title">C</h3>
+                      </div>
+                      <ul class="am-list am-list-static">
+                        <li>:CHOCOOLATE<span class="hot">HOT</span></li>
+                        <li>CHUMS</li>
+                        <li>CHUMS Kids<span class="hot">HOT</span></li>
+                        <li>Coastal Vison镜宴</li>
+                        <li>COOⅢ絝逸<span class="hot">HOT</span></li>
+                        <li>Creamsoda</li>
+                      </ul>
+                    </div>
+                    <div class="am-panel am-panel-default">
+                      <div class="am-panel-hd">
+                        <h3 class="am-panel-title">D</h3>
+                      </div>
+                      <ul class="am-list am-list-static">
+                        <li>DC KIDS<span class="hot">HOT</span></li>
+                        <li>Dickis</li>
+                        <li>DISITU 迪斯兔<span class="hot">HOT</span></li>
+                        <li>dress lab</li>
+                        <li>Dr.Martens KIDS<span class="hot">HOT</span></li>
+                      </ul>
+                    </div>
+                </div>
+                <div class="tab-3-content">
+                  <div class="pinpai-top">
+                    <i class="am-icon-search"></i>
+                    <div><input class="pinpai-top-input" type="text" placeholder="搜索品牌"></div>
+                  </div>
+                  <div class="am-slider am-slider-default" data-am-flexslider id="demo-slider-0">
+                    <ul class="am-slides">
+                      <li><img src="../fl-image/pinpai-banner-kid.png" /></li>
+                      <li><img src="../fl-image/pinpai-banner-kid.png" /></li>
+                      <li><img src="../fl-image/pinpai-banner-kid.png" /></li>
+                    </ul>
+                  </div>
+                  <!-- 三层顶头轮播图 -->
+                  <div class="fl-hot"><span>热门品牌</span></div>
+                    <!-- 三层小图片轮播 -->
+
+                    <div class="am-panel am-panel-default">
+                      <div class="am-panel-hd">
+                        <h3 class="am-panel-title">A</h3>
+                      </div>
+                      <ul class="am-list am-list-static">
+                        <li>Airhole</li>
+                        <li>AIRNUM</li>
+                        <li>AKOP.<span class="hot">HOT</span></li>
+                      </ul>
+                    </div>
+                    <div class="am-panel am-panel-default">
+                      <div class="am-panel-hd">
+                        <h3 class="am-panel-title">B</h3>
+                      </div>
+                      <ul class="am-list am-list-static">
+                        <li>BABAMA<span class="hot">HOT</span></li>
+                        <li>badyONE</li>
+                        <li>B.Duck</li>
+                        <li>Boboli</li>
+                      </ul>
+                    </div>
+                    <div class="am-panel am-panel-default">
+                      <div class="am-panel-hd">
+                        <h3 class="am-panel-title">C</h3>
+                      </div>
+                      <ul class="am-list am-list-static">
+                        <li>:CHOCOOLATE<span class="hot">HOT</span></li>
+                        <li>CHUMS</li>
+                        <li>CHUMS Kids<span class="hot">HOT</span></li>
+                        <li>Coastal Vison镜宴</li>
+                        <li>COOⅢ絝逸<span class="hot">HOT</span></li>
+                        <li>Creamsoda</li>
+                      </ul>
+                    </div>
+                    <div class="am-panel am-panel-default">
+                      <div class="am-panel-hd">
+                        <h3 class="am-panel-title">D</h3>
+                      </div>
+                      <ul class="am-list am-list-static">
+                        <li>DC KIDS<span class="hot">HOT</span></li>
+                        <li>Dickis</li>
+                        <li>DISITU 迪斯兔<span class="hot">HOT</span></li>
+                        <li>dress lab</li>
+                        <li>Dr.Martens KIDS<span class="hot">HOT</span></li>
+                      </ul>
+                    </div>
+                </div>
+                </div>
+            </div>
+
+            <div class="am-tab-panel">
+                <!-- 关注 -->
+                <div class="tj-nav">
+                  <ul class="am-avg-sm-3">
+                    <li><img src="../fl-image/fl-gz-goods-logo_1.png" alt=""></li>
+                    <li>
+                      <p class="tj-logo-name">WONDER HOME</p>
+                    <p class="tj-logo-data">3月1日</p>
+                  </li>
+                    <li class="tj-last-li">
+                      <span class="tj-box">推荐</span>
+                      <i class="am-icon-heart tj-icon"></i>
+                    </li>
+                  </ul>
+
+                  <ul class="am-avg-sm-3 tj-img">
+                    <li><div class="tj-img-box"><img src="../fl-image/fl-gz-goods-1.png" alt=""></div><p>¥125.00</p><p>999</p></li>
+                    <li><div class="tj-img-box tj-img-box-mid"><img src="../fl-image/fl-gz-goods-2.png" alt=""></div><p>¥125.00</p></li>
+                    <li><div class="tj-img-box"><img src="../fl-image/fl-gz-goods-3.png" alt=""></div><p>¥125.00</p></li>
+                  </ul>
+
+                  </div>
+                </div>
+            </div>
+        </div>
+        <!-- 一级选项卡结束 -->
+    </div>
+    <!-- 顶部选项卡 结束-->
+
+</body>
+<script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="../script/api.js" charset="utf-8"></script>
+<script src="../amazeui/js/amazeui.min.js"></script>
+<script src="../script/fastclick.js" charset="utf-8"></script>
+<script src="../script/swiper-4.1.6.min.js" charset="utf-8"></script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        FastClick.attach(document.body);
+    }, false);
+    apiready = function() {
+
+        api.setRefreshHeaderInfo({
+            // loadingImg: 'widget://image/refresh.png',
+            bgColor: '#363636',
+            textColor: '#fff',
+            textDown: '下拉刷新...',
+            textLoading: '刷新中...',
+            showTime: true,
+            textUp: '松开刷新...'
+        }, function(ret, err) {
+            api.refreshHeaderLoadDone()
+                //在这里从服务器加载数据，加载完成后调用api.refreshHeaderLoadDone()方法恢复组件到默认状态
+        });
+        api.parseTapmode()
+    }
+
+    $(document).ready(function() {
+        $('.tab-2 li').click(function() {
+            var $this = $(this);
+            var index = $this.index();
+            $this.addClass("tab-2-active").siblings().removeClass("tab-2-active");
+            $('.tab-2-content').eq(index).addClass('tab-2-content-active').siblings().removeClass('tab-2-content-active');
+        })
+    })
+
+    $(document).ready(function() {
+        $('.tab-3 li').click(function() {
+            var $this = $(this);
+            var index = $this.index();
+            $this.addClass("tab-3-active").siblings().removeClass("tab-3-active");
+            $('.tab-3-content').eq(index).addClass('tab-3-content-active').siblings().removeClass('tab-3-content-active');
+        })
+    })
+
+
+
+
+    $(document).ready(function() {
+        $('.swiper-slide1').click(function() {
+            var $this = $(this);
+            var index = $this.index();
+            $this.addClass("goods-nav-active").siblings().removeClass("goods-nav-active");
+            $('.goods-list').eq(index).addClass('goods-list-active').siblings().removeClass('goods-list-active');
+        })
+    })
+
+
+    $(document).ready(function() {
+        $('.swiper-slide2').click(function() {
+            var $this = $(this);
+            var index = $this.index();
+            $this.addClass("goods-nav-active").siblings().removeClass("goods-nav-active");
+            $('.goods-list2').eq(index).addClass('goods-list-active').siblings().removeClass('goods-list-active');
+        })
+    })
+
+    $(document).ready(function() {
+            $('.swiper-slide3').click(function() {
+                var $this = $(this);
+                var index = $this.index();
+                $this.addClass("goods-nav-active").siblings().removeClass("goods-nav-active");
+                $('.goods-list3').eq(index).addClass('goods-list-active').siblings().removeClass('goods-list-active');
+            })
+        })
+        // $('#swiper-container1').html('');
+    var mySwiper = new Swiper('#swiper-container1', {
+        direction: 'vertical',
+        width: 98,
+        height: 60,
+        freeMode: true,
+        setWrapperSize: true,
+        // loop:false,
+        scrollbar: { //滚动条
+            el: '.swiper-scrollbar',
+            hide: true,
+            dragSize: 300,
+        },
+    })
+
+    var mySwiper2 = new Swiper('#swiper-container2', {
+        direction: 'vertical',
+        width: 98,
+        height: 60,
+        freeMode: true,
+        setWrapperSize: true,
+        // loop:false,
+        scrollbar: { //滚动条
+            el: '.swiper-scrollbar',
+            hide: true,
+            dragSize: 300,
+        },
+    })
+    var mySwiper3 = new Swiper('#swiper-container3', {
+        direction: 'vertical',
+        width: 98,
+        height: 60,
+        freeMode: true,
+        setWrapperSize: true,
+        // loop:false,
+        scrollbar: { //滚动条
+            el: '.swiper-scrollbar',
+            hide: true,
+            dragSize: 300,
+        },
+    })
+$('.am-slider').flexslider({
+  animation: "fade",
+  animationLoop: true,
+  keyboard: false,
+  initDelay: 300,
+  directionNav: false,
+  touch: true,
+});
+
+
+var mySwiper4 = new Swiper('#swiper-container4', {
+    // loop: false,
+    slidesPerView: 'auto',
+    freeMode : true,
+    paceBetween : 30,
+    // loopedSlides: 3,
+})
+
+</script>
+
+</html>
