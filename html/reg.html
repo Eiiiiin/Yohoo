@@ -5,19 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
-      <link rel="stylesheet" href="../amazeui/css/amazeui.min.css">
+    <link rel="stylesheet" href="../amazeui/css/amazeui.min.css">
   <style>
   body,html{
     margin:0;
     padding:0;
+      background-color: #fff;
   }
   ul,li{
     list-style: none;
   }
   .top{
     height:160px;
-    background: url(../image/loginbg_01.png)center center no-repeat;
-    background-size: 100%;
+    /*background: url(../image/loginbg_01.png)center center no-repeat;
+    background-size: 100%;*/
     position: relative;
   }
   .top i{
@@ -47,8 +48,9 @@
     display: inline-block;
     width: 24px;
     height: 24px;
-    background: url(../icon/cw.png)center center no-repeat;
+    background: url(../icon/cw2.png)center center no-repeat;
     background-size: 100%;
+
 
   }
   .main{
@@ -89,6 +91,26 @@
     background: url(../icon/dl_06.png) center center no-repeat;
     background-size: 100%;
   }
+  .user-lock{
+    position: absolute;
+    top:99px;
+    left:2px;
+    display: inline-block;
+    width: 14px;
+    height: 15px;
+    background: url(../icon/lock.png) center center no-repeat;
+    background-size: 100%;
+  }
+  .mine{
+    position: absolute;
+    top:142px;
+    left:2px;
+    display: inline-block;
+    width: 14px;
+    height: 15px;
+    background: url(../icon/mine.png) center center no-repeat;
+    background-size: 100%;
+  }
   .golin-btn{
     width:100%;
     height: 35px;
@@ -108,24 +130,42 @@
   .logo ul li i{
     font-size: 3rem;
   }
-
+  .tip{
+    width:100%;
+    height: 95px;
+    background-color: #444;
+    text-align: center;
+    line-height: 95px;
+    color:#fff;
+    position: absolute;
+    top:-95px;
+    /*display: block;*/
+  }
   </style>
 </head>
 <body>
-
+  <div class="tip" id="tip">然而我并没有写验证</div>
   <div class="top">
       <i class="close" tapmode onclick="closewin();"></i>
-      <span class="reg" tapmode onclick="goreg();">注册</span>
+      <!-- <span class="reg" tapmode onclick="goreg();">注册</span> -->
   </div>
   <div class="main">
     <ul>
       <li>
         <i class="user-phone"></i>
-        <input class="username" type="text" name="" value="" placeholder="请输入手机号/账号">
+        <input class="username" type="text" name="" value="" placeholder="请输入手机号">
       </li>
       <li>
         <i class="user-psw"></i>
         <input class="psw" type="password" name="" value="" placeholder="请输入密码">
+      </li>
+      <li>
+        <i class="user-lock"></i>
+        <input class="psw" type="password" name="" value="" placeholder="请再次输入密码">
+      </li>
+      <li>
+        <i class="mine"></i>
+        <input class="psw" type="password" name="" value="" placeholder="好友潮流口令(选填)">
       </li>
       <li class="golin-btn" tapmode onclick="gologin();">登录</li>
     </ul>
@@ -147,29 +187,18 @@ apiready = function(){
 function closewin(){
   api.closeWin();
 }
-function goreg(){
-  api.openWin({
-      name: 'reg',
-      url: './reg.html',
-      rect: {
-          x: 0,
-          y: 0,
-          w: 'auto',
-          h: 'auto'
-      },
-      animation:{
-        type:'ripple',
-        // subType:'from_bottom'
-      },
-  });
 
-}
 function gologin(){
-  api.toast({
-      msg: '然而我并没有写完验证',
-      duration: 2000,
-      location: 'bottom'
-  });
+
+
+$api.css($api.byId('tip'), 'top:0; transition:all 1S ease');
+
+// function myTime(){
+  setTimeout(function(){
+    $api.css($api.byId('tip'), 'top:-95px; transition:all 1S ease');
+  },3000)
+// }
+
 
 }
 </script>
